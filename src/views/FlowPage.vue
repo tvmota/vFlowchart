@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="container">
     <div class="columns">
-      <div class="column col-12">
+      <div class="column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <flow-chart></flow-chart>
       </div>
     </div>
