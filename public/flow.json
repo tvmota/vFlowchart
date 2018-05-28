@@ -1,0 +1,63 @@
+{
+  "etapas": [
+    {
+      "nome": "Etapa de inicio",
+      "flx": false,
+      "codEtapa": 11,
+      "alarm": false,
+      "sla": false,
+      "codFormulario": 100,
+      "formulario":"APLICAÇÃO DE VALOR DE BOLSA DE ESUDO POR MÉRITO - ESTUDANTE"
+    },
+    {
+      "nome": "Etapa de inicio -2",
+      "formulario": "Formulário Inicial",
+      "flx": false,
+      "codFormulario": 1,
+      "codEtapa": 1,
+      "alarm": true,
+      "sla": true
+    },
+    {
+      "nome": "Etapa de analise",
+      "formulario": "Formulário da segunda etapa",
+      "flx": false,
+      "codFormulario": 2,
+      "codEtapa": 2
+    },
+    {
+      "nome": "Etapa de Homologacao e algo mais",
+      "formulario": "Fluxo Homologação Fluxo Homologação",
+      "flx": true,
+      "codFluxo": 1,
+      "codEtapa": 3,
+      "codFormulario": 3,
+      "sla": true
+    },
+    {
+      "nome": "Etapa de Homologacao",
+      "formulario":"ADIANTAMENTO PARA ATIVIDADE ACADÊMICA - COORDENAÇÃO DO DOCENTE ETAPA2",
+      "flx": false,
+      "codFormulario": 4,
+      "codEtapa": 4,
+      "alarm": true
+    },
+    {
+      "nome": "Etapa de Finalização",
+      "formulario": "Formulário de Finalização",
+      "flx": false,
+      "codFormulario": 5,
+      "codEtapa": 5
+    }
+  ],
+  "fluxos": {
+    "nome": "Fluxo do Serviço da Câmara",
+    "title": "Fluxo do Serviço daCâmara",
+    "selected": false
+  },
+  "servicos": {
+    "nome": "Orientações em Geral",
+    "title": "Orientações em Geral",
+    "selected": false
+  }
+}
