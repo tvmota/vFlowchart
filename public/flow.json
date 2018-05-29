@@ -3,7 +3,8 @@
     {
       "nome": "Etapa de inicio",
       "flx": false,
-      "codEtapa": 11,
+      "id": 11,
+      "tipo": 1,
       "alarm": false,
       "sla": false,
       "codFormulario": 100,
@@ -12,25 +13,24 @@
     {
       "nome": "Etapa de inicio -2",
       "formulario": "Formulário Inicial",
-      "flx": false,
+      "tipo": 2,
       "codFormulario": 1,
-      "codEtapa": 1,
+      "id": 1,
       "alarm": true,
       "sla": true
     },
     {
       "nome": "Etapa de analise",
       "formulario": "Formulário da segunda etapa",
-      "flx": false,
+      "tipo": 2,
       "codFormulario": 2,
-      "codEtapa": 2
+      "id": 2
     },
     {
       "nome": "Etapa de Homologacao e algo mais",
       "formulario": "Fluxo Homologação Fluxo Homologação",
-      "flx": true,
-      "codFluxo": 1,
-      "codEtapa": 3,
+      "tipo": 2,
+      "id": 3,
       "codFormulario": 3,
       "sla": true
     },
@@ -38,26 +38,49 @@
       "nome": "Etapa de Homologacao",
       "formulario":"ADIANTAMENTO PARA ATIVIDADE ACADÊMICA - COORDENAÇÃO DO DOCENTE ETAPA2",
       "flx": false,
+      "tipo": 2,
       "codFormulario": 4,
-      "codEtapa": 4,
+      "id": 4,
       "alarm": true
     },
     {
       "nome": "Etapa de Finalização",
       "formulario": "Formulário de Finalização",
       "flx": false,
+      "tipo": 2,
       "codFormulario": 5,
-      "codEtapa": 5
+      "id": 5
+    },
+    {
+      "nome": "Fim",
+      "tipo": -1,
+      "id": 999
+    },
+    {
+      "id": 102,
+      "nome": "Fluxo do Serviço da Câmara",
+      "title": "Fluxo do Serviço daCâmara",
+      "selected": false,
+      "tipo": 3
+    },
+    {
+      "id": 101,
+      "nome": "Orientações em Geral",
+      "title": "Orientações em Geral",
+      "selected": false,
+      "tipo": 4
+    },
+    {
+      "id": 103,
+      "nome": "Form",
+      "title": "Orientações em Geral",
+      "selected": false,
+      "tipo": 5
     }
   ],
-  "fluxos": {
-    "nome": "Fluxo do Serviço da Câmara",
-    "title": "Fluxo do Serviço daCâmara",
-    "selected": false
-  },
-  "servicos": {
-    "nome": "Orientações em Geral",
-    "title": "Orientações em Geral",
-    "selected": false
-  }
+  "links": [
+    { "from": 11, "to": 102 },
+    { "from": 1, "to": 101 },
+    { "from": 2, "to": 103 }
+  ]
 }

@@ -20,3 +20,66 @@ main {
 footer {
   grid-area: footer;
 }
+
+.diagrama {
+  &_arrow{
+		stroke-width: 3;
+		stroke: #000;
+	}
+
+  &_etapa {
+    fill: #b0d7e5;
+    fill-opacity: .3;
+    stroke: #b0d7e5;
+    stroke-width: 1.5px;
+    cursor: pointer;
+    &--selecionado {
+      fill:#aa5189;
+      stroke: #000;
+      stroke-width: 1.5px;
+      fill-opacity: .4;
+    }
+  }
+
+  &_inicio {
+    fill: #ccc;
+    fill-opacity: .3;
+    stroke: #666;
+    stroke-width: 1.5px;
+    cursor: pointer;
+    &--selecionado {
+      fill:#1b80a6;
+      stroke: #000;
+      stroke-width: 1.5px;
+      fill-opacity: .4;
+    }
+  }
+
+  &_servico {
+    fill: #a9d589;
+    fill-opacity: .3;
+    stroke: #a9d589;
+    stroke-width: 1.5px;
+  }
+
+  &_fluxo {
+    fill: #e4aa84;
+    fill-opacity: .3;
+    stroke: #e4aa84;
+    stroke-width: 1.5px;
+  }
+
+  &_form {
+    fill: #fdf6a6;
+    fill-opacity: .3;
+    stroke: #fdf6a6;
+    stroke-width: 1.5px;
+  }
+
+  &_fim {
+    fill: #eb5555;
+    fill-opacity: .3;
+    stroke: #eb5555;
+    stroke-width: 1.5px;
+  }
+}
