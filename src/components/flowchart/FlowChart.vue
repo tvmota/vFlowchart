@@ -17,10 +17,16 @@ export default {
       while (tmp.length) cache.push(tmp.splice(0, chunkSize))
       return cache
     },
-    changeWidth () {
-      if (this.svgLayer) {
-        this.svgLayer.attr('width', this.$refs.flowContainer.offsetWidth)
-      }
+    changeWidth (svg) {
+      let container = d3.select(svg.node().parentNode)
+      let w = parseInt(svg.style('width'))
+      let h = parseInt(svg.style('height'))
+
+      svg.attr('viewBox', `0 0 ${w} ${h}`)
+        .attr('perserveAspectRatio', 'xMinYMid')
+        .call(this.resize)
+
+      d3.select(window).on(`resize.${container.attr('id')}`, this.resize)
     },
     initFlow () {
       let self = this
@@ -161,17 +167,26 @@ export default {
           .attr('y1', 25 + etapa.getBBox().y)
           .attr('y2', 25 + etapa.getBBox().y)
       })
+
+      self.svgLayer.call(self.changeWidth)
     },
     selectEtapa (elm) {
       let self = this
       let classe = ''
-      if(self.etapaSelecionada){
+      if (self.etapaSelecionada) {
         classe = self.etapaSelecionada.getAttribute('class')
         self.etapaSelecionada.setAttribute('class', classe.replace(/--.*/g, ''))
       }
       self.etapaSelecionada = elm
       classe = self.etapaSelecionada.getAttribute('class')
       self.etapaSelecionada.setAttribute('class', `${classe}--selecionado`)
+    },
+    resize () {
+      let targetWidth = this.svgLayer.node().parentNode.style.width
+      let h = parseInt(this.svgLayer.node().parentNode.style('height'))
+      let aspect = targetWidth / h
+      this.svgLayer.attr('width', '100%')
+      this.svgLayer.attr('height', Math.round(targetWidth / aspect))
     }
   },
   computed: {
